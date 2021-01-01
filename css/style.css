@@ -48,7 +48,7 @@ a:focus {
 }
 
 img {
-    max-width: 100%;
+    max-width: 200%;
     height: auto;
 }
 
@@ -290,7 +290,7 @@ small {
     width: 100%;
     height: 100%;
     position: absolute;
-    overflow: hidden;
+    overflow: auto;
     background: url(../images/bg_1_1.jpg) #333 40% 40%;
     background-size: cover;
 }
@@ -1452,6 +1452,8 @@ ul.info-list li strong {
         9. RESPONSIVE
 ------------------------- */
 
+
+
 @media (min-width:1920px) {
     .name-block {
         -ms-transform: rotate(-34deg);
@@ -1851,6 +1853,8 @@ ul.info-list li strong {
     font: inherit
 }
 
+
+
 html,
 body,
 div,
@@ -1942,10 +1946,10 @@ html {
     box-sizing: border-box
 }
 
-body {
+/*body {
     background-color: hsl(0, 0%, 100%);
     background-color: var(--color-bg, white)
-}
+}*/
 
 article,
 aside,
@@ -1979,6 +1983,9 @@ textarea,
 select {
     margin: 0
 }
+
+
+
 
 /*
 .btn,
@@ -2016,11 +2023,11 @@ table {
     border-spacing: 0
 }
 
-img,
+/*img,
 video,
 svg {
     max-width: 100%
-}
+}*/
 
 [data-theme] {
     background-color: hsl(0, 0%, 100%);
@@ -2897,19 +2904,22 @@ svg {
     --heading-line-height: 1.2
 }
 
-body {
+
+
+/*body {
     font-size: 1em;
     font-size: var(--text-base-size, 1em);
     font-family: 'Droid Serif', serif;
     font-family: var(--font-primary, sans-serif);
     color: hsl(240, 4%, 20%);
     color: var(--color-contrast-high, #313135)
-}
+}*/
 
-h1,
-h2,
-h3,
-h4 {
+
+.timeline h1,
+.timeline h2,
+.timeline h3,
+.timeline h4 {
     color: hsl(240, 8%, 12%);
     color: var(--color-contrast-higher, #1c1c21);
     line-height: 1.2;
@@ -2921,31 +2931,31 @@ h4 {
     font-size: var(--text-xxxl, 2.488em)
 }
 
-h1,
+.timeline h1,
 .text-xxl {
     font-size: 2.0736em;
     font-size: var(--text-xxl, 2.074em)
 }
 
-h2,
+.timeline h2,
 .text-xl {
     font-size: 1.728em;
     font-size: var(--text-xl, 1.728em)
 }
 
-h3,
+.timeline h3,
 .text-lg {
     font-size: 1.44em;
     font-size: var(--text-lg, 1.44em)
 }
 
-h4,
+.timeline h4,
 .text-md {
     font-size: 1.2em;
     font-size: var(--text-md, 1.2em)
 }
 
-small,
+.timeline small,
 .text-sm {
     font-size: 0.83333em;
     font-size: var(--text-sm, 0.833em)
@@ -2956,23 +2966,23 @@ small,
     font-size: var(--text-xs, 0.694em)
 }
 
-a,
+.timeline a,
 .link {
     color: hsl(220, 90%, 56%);
     color: var(--color-primary, #2a6df4);
     text-decoration: underline
 }
 
-strong,
+.timeline strong,
 .text-bold {
     font-weight: bold
 }
 
-s {
+.timeline s {
     text-decoration: line-through
 }
 
-u,
+.timeline u,
 .text-underline {
     text-decoration: underline
 }
@@ -5485,6 +5495,7 @@ mark {
     }
 }
 
+
 .cd-timeline__img {
     display: -ms-flexbox;
     display: flex;
@@ -5496,15 +5507,39 @@ mark {
     flex-shrink: 0;
     width: 40px;
     height: 40px;
+    /*
     border-radius: 50%;
     box-shadow: 0 0 0 4px hsl(0, 0%, 100%), inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
     box-shadow: 0 0 0 4px var(--color-white), inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05)
+    */
 }
 
+
 .cd-timeline__img img {
-    width: 24px;
-    height: 24px
+    width: 48px;
+    height: 48px
 }
+
+.cd-timeline__img--1 img {
+    width: 60px;
+    height: auto;
+}
+
+.cd-timeline__img--2 img {
+    width: 55px;
+    height: auto;
+}
+
+.cd-timeline__img--3 img {
+    width: 60px;
+    height: auto;
+}
+
+.cd-timeline__img--4 img {
+    width: 65px;
+    height: auto;
+}
+
 
 @media (min-width: 64rem) {
     .cd-timeline__img {
@@ -5521,18 +5556,24 @@ mark {
 }
 
 .cd-timeline__img--picture {
+    /*
     background-color: hsl(111, 51%, 60%);
     background-color: var(--cd-color-4)
+    */
 }
 
 .cd-timeline__img--movie {
+    /*
     background-color: hsl(356, 53%, 49%);
     background-color: var(--cd-color-5)
+    */
 }
 
 .cd-timeline__img--location {
+    /*
     background-color: hsl(47, 85%, 61%);
     background-color: var(--cd-color-6)
+    */
 }
 
 .cd-timeline__content {
@@ -5594,7 +5635,10 @@ mark {
 
 .cd-timeline__date {
     color: hsla(207, 10%, 55%, 0.7);
-    color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.7)
+    color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.7);
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 @media (min-width: 64rem) {

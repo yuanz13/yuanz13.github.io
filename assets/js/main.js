@@ -15,14 +15,14 @@
 		}
 		//hide timeline blocks which are outside the viewport
 		var self = this;
-		for( var i = 0; i < this.blocks.length; i++) {
-			(function(i){
-				if( self.blocks[i].getBoundingClientRect().top > window.innerHeight*self.offset ) {
-					self.images[i].classList.add("cd-timeline__img--hidden"); 
-					self.contents[i].classList.add("cd-timeline__content--hidden"); 
-				}
-			})(i);
-		}
+		// for( var i = 0; i < this.blocks.length; i++) {
+		// 	(function(i){
+		// 		if( self.blocks[i].getBoundingClientRect().top > window.innerHeight*self.offset ) {
+		// 			self.images[i].classList.add("cd-timeline__img--hidden"); 
+		// 			self.contents[i].classList.add("cd-timeline__content--hidden"); 
+		// 		}
+		// 	})(i);
+		// }
 	};
 
 	VerticalTimeline.prototype.showBlocks = function() {
